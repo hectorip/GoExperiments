@@ -10,7 +10,7 @@ type Programmer struct{
 }
 
 func (p Programmer) codes() string {
-    return "This guy codes in "+ p.preferredLanguage
+    return "Codes in "+ p.preferredLanguage
 }
 
 func main() {
