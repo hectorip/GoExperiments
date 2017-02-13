@@ -3,6 +3,7 @@ import "fmt"
 
 type ProgrammerInterface interface{
     codes() string
+    your_work() string
 }
 
 type Programmer struct{
@@ -11,6 +12,10 @@ type Programmer struct{
 
 func (p Programmer) codes() string {
     return "Codes in "+ p.preferredLanguage
+}
+
+func (p Programmer) your_work() string{
+    return "Hello World!"
 }
 
 func main() {

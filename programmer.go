@@ -13,6 +13,6 @@ func(brogrammer *Programmer) codes() string {
 
 func main() {
     var yo Programmer;
-    yo.preferredLanguage = "Ruby";
+    yo.preferredLanguage = "Go";
     fmt.Println(yo.codes())
 }
