@@ -9,5 +9,6 @@ func main() {
     fmt.Println(os.Args)
 
     // Args es un slice
-    cml_arguments := os.Args[1]
+    cml_arguments := os.Args[1:]
+    fmt.Println(cml_arguments)
 }
