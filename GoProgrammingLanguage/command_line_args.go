@@ -1,6 +1,6 @@
 package main
-import "fmt"
-import "os"
+import ("fmt"
+    "os")
 
 func main() {
     fmt.Println("Este es un programa que lee los argumentos de consola: \n")
