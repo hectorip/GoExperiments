@@ -9,11 +9,16 @@ import (
 
 func main() {
     http.HandleFunc("/webhook", Verify)
-    // http.HandleFunc("/", Index)
+    http.HandleFunc("/", Index)
     fmt.Println("Starting Server in port :9090")
     log.Fatal(http.ListenAndServe(":9090", nil))
 }
 
+func Index(w http.ResponseWriter, _ *http.Request){
+    w.Header().Set("Content-Type", "text/html")
+    fmt.Fprintf(w, "<h1>Bienvenido al Bot responder</h1>")
+    return
+}
 func Verify(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Content-Type", "text/plain")
     if r.Method == "GET" {
