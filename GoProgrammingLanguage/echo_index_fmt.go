@@ -4,16 +4,14 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func main() {
-	var s, sep string
+	var sep string
 
     // en cada iteración declara index y toma el argumento
 	for index, arg := range os.Args[1:] {
-		s += sep + strconv.Itoa(index) + " " + arg
+		fmt.Printf(sep + " %d " + arg, index)
 		sep = "\n"
 	}
-	fmt.Println(s)
 }
