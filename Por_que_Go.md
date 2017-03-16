@@ -7,6 +7,6 @@ Otra de las razones por las que me acercqué a Go, es por los nombres que lo res
 
 # Para que no sirve Go
 
-Ningún lenguaje de programación está hecho para todas las funciones, no me gusta compararlos a herramientas, para mi son más bien como materiales de construcción, y como tales, no están hechos para todas las funciones.
+Ningún lenguaje de programación está hecho para todas las funciones, no me gusta compararlos a herramientas, para mi son más bien como materiales de construcción, y como tales, no están hechos para todas los casos posibles.
 
 Debido a su Garbage Colector, Go no está hecho para programar sistemas, o programas de bajo nivel que estén conectados con el hardware, o sistemas embebidos. Investigaré un poco más sobre este tema, pero Go tiene claros límites.
