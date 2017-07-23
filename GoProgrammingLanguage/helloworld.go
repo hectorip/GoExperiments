@@ -5,5 +5,5 @@ import "fmt"
 
 // No se pueden importar paquetes que no se ocupen
 func main() {
-	fmt.Println("Hello !")
+	fmt.Println("Hello, 世界!") // Sekai - mundo en japonés
 }
