@@ -12,5 +12,7 @@ import "fmt"
 func main() {
     // go es unicode, por lo que puede soportar carácteres
     // de todos los lenguajes
-	fmt.Println("Hello, 世界!") // Sekai - mundo en japonés 
+	fmt.Println("Hello, 世界!") 
+    // Sekai - mundo en japonés 
 }
+ // Correr go fmt para formatear
