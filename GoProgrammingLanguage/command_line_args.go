@@ -5,7 +5,6 @@ import (
 	"os"
 )
 
-// la función main es obligatoria
 func main() {
 	fmt.Println("Este es un programa que lee los argumentos de consola: \n")
 	fmt.Println(os.Args)

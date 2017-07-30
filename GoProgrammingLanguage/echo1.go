@@ -1,7 +1,7 @@
 // Imprime los argumentos pasados de regreso en la terminal
+
 package main
 
-// Importar paquete
 import (
 	"fmt"
 	"os"
