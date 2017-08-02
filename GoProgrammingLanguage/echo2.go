@@ -1,4 +1,5 @@
-// Segunda versión del comando echo, utilizando diferentes estructuras
+// Segunda versión del comando `echo`, utilizando diferentes estructuras
+
 package main
 
 import (
