@@ -9,14 +9,19 @@ import (
 )
 
 func main() {
-    // declaración de variables con tipo explícito
-    // al no asignarles valores inicialmente, se van
-    // a "", para los strings.
+	// Declaración de variables con tipo explícito
+	// al no asignarles valores inicialmente, se
+	// establecen como cadenas vacías("") para
+	// los strings.
 	var s, sep string
-	for i := 1; i <= len(os.Args[1:]); i++ {
+
+	// Ciclo `for`
+	// Consiste de trees partes, iniciialización,
+	// prueba y post-operación
+	for i := 1; i <= len(os.Args[1:]); i++ { // no se usan paréntesis para la configuración del ciclog
 		s += sep + os.Args[i]
 
-		// Así se salta el primer loop
+		// Saltando el primer seprador
 		sep = " "
 	}
 	fmt.Println(s)
