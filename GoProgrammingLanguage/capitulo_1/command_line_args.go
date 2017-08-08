@@ -12,5 +12,5 @@ func main() {
 	// Args es un slice, que en Go se comportan como una lista
 	cml_arguments := os.Args[1:] // Se elimina el primer argumento que es el nombre del programa mismo
 	fmt.Println(cml_arguments)
-	// Por el momento, no me gusta nada que la identación sean espacios.
+	// Por el momento, no me gusta nada que la identación sean tabs.
 }
