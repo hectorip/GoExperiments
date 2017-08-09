@@ -20,8 +20,15 @@ var speed float64
 
 // Estructuras (structs)
 
-struct {
+// Son tipos de dato compuestos diseñados para representar información
+// compleja, pueden pensarse como la parte de las propiedades
+// de los objetos en los lenguajes que lo soportan.
 
+// 
+struct {
+  Name string
+  Age int // los campos con nombres en mayúscula son públicos
+  gender bool  
 }
 
 
