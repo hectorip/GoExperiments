@@ -1,3 +1,4 @@
+// Lee los argumentos en línea de comandos y los imprime de regreso
 package main
 
 import (
