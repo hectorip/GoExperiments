@@ -9,9 +9,16 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello repetition counter")
+	fmt.Println("Hello repetition counter \n")
+	repetitions := make(map[string]int)
 	var scanner = bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
-		fmt.Println(scanner.Text())
+		repetitions[scanner.Text()]++
+	}
+
+	for line, reps := range repetitions {
+		if reps > 1 {
+			fmt.Printf("%s \t %d\n", line, reps)
+		}
 	}
 }
