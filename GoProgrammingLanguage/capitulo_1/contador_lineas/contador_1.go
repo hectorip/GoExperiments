@@ -3,14 +3,15 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
+	"fmt"
+	"os"
 )
 
 func main() {
 	fmt.Println("Hello repetition counter")
-	var scanner = bufio.NewScanner();
-	for line := scanner.Input() {
-		fmt.Println(line)
+	var scanner = bufio.NewScanner(os.Stdin)
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
 	}
 }
