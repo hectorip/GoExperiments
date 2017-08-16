@@ -26,7 +26,7 @@ func main() {
 	fmt.Println("\n\nLíneas repetidas: \n")
 	for line, reps := range repetitions {
 		if reps > 1 {
-			fmt.Printf("%s \t %d\n", line, reps)
+			fmt.Printf("%s \t %d \n", line, reps)
 		}
 	}
 }

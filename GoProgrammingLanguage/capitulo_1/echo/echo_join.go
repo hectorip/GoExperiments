@@ -1,5 +1,5 @@
 // La manera más corta de implementar
-// el echo, usando funciones predefinidas de Go
+// el echo, usando funciones predefinidas de Go.
 
 package main
 

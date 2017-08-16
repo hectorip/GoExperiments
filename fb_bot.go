@@ -9,17 +9,22 @@ import (
 )
 
 func main() {
+	// Declarando endpoints
 	http.HandleFunc("/webhook", Verify)
 	http.HandleFunc("/", Index)
+	// Log
 	fmt.Println("Starting Server, port :9090")
-	log.Fatal(http.ListenAndServe(":9090", nil))
+	http.ListenAndServe(":9090", nil) // Iniciando el servidor
 }
 
 func Index(w http.ResponseWriter, _ *http.Request) {
+	// Página de prueba para comprobar visualmente que
+	// el servidor se levantó
 	w.Header().Set("Content-Type", "text/html")
-	// no se lo que hace Fprintf
+
+	// Escribe en el Response writer como si fuera un archivo
 	fmt.Fprintf(w, "<h1>Bienvenido al Bot responder</h1>")
-	return
+	return // todas las funciones en Go tienen que usar return ?
 }
 
 func Verify(w http.ResponseWriter, r *http.Request) {
