@@ -13,10 +13,10 @@ var name string = "" // redundante, no debería usarse muy seguido
 
 // Tipos de dato
 
-var age int
-var gender bool
-var name string
-var speed float64
+var age int // Números enteros
+var gender bool // Valroes true y false
+var name string // Cadenas de text
+var speed float64 // Números decimales representados internamente con 64 bits
 
 // Estructuras (structs)
 
@@ -28,8 +28,10 @@ var speed float64
 struct {
   Name string
   Age int // los campos con nombres en mayúscula son públicos
-  gender bool  
+  gender bool
 }
+
+
 
 
 
