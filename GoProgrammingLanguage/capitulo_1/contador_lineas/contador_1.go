@@ -23,6 +23,8 @@ func main() {
 	} // El scanner devuelve falso cuando encuentra EOF,
 	// en la consola se manda con CTRL + D
 
+	// Mostrando las líneas que se repiten, recorriendo el arreglo y
+	// filtrando las que no tienen en su cuenta más que dos
 	fmt.Println("\n\nLíneas repetidas: \n")
 	for line, reps := range repetitions {
 		if reps > 1 {
