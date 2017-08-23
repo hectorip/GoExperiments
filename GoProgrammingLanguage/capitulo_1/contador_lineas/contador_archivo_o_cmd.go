@@ -1,6 +1,6 @@
 // Este programa puede contar las líneas proveninentes de un
 // archivo o de la línea de comandos
-package contador_lineas
+package main
 
 import (
 	"bufio"
@@ -18,7 +18,7 @@ func main() {
 		countLines(os.Stdin, counts)
 	} else {
 		for _, file := range files {
-			f, err := os.Open(arg)
+			f, err := os.Open(file)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 				continue // Termina esta iteración del ciclo
@@ -29,7 +29,7 @@ func main() {
 	}
 	for line, count := range counts {
 		if count > 1 {
-			fmt.Printf("%d\t%s\n", n, line)
+			fmt.Printf("%d\t%s\n", count, line)
 		}
 	}
 }
