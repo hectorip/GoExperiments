@@ -35,6 +35,13 @@ func main() {
 }
 
 func countLines(f *os.File, counts map[string]int) {
+	// Cuenta las líneas efectivamente y las guarda en el
+	// diccionario que se le pasó
+
+	// Todos los diccionarios son pasados por "referencia"
+	// lo que indica que los cambios hechos en esta función
+	// afectarán la variable externa
+
 	input := bufio.NewScanner(f)
 	for input.Scan() {
 		counts[input.Text()]++
