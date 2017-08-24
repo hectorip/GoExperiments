@@ -27,6 +27,7 @@ func main() {
 			f.Close()
 		}
 	}
+	fmt.Println("RESULTS")
 	for line, count := range counts {
 		if count > 1 {
 			fmt.Printf("%d\t%s\n", count, line)
