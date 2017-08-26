@@ -1,4 +1,5 @@
 // Crea un Gif con una figura de Lissajour
+// (curvas extrañas)
 
 package main
 
