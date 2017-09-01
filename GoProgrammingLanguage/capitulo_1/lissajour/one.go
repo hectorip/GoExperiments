@@ -15,7 +15,7 @@ import (
 
 var palette = []color.Color{color.White, color.Black} // Declaramos la paleta de Colores que usaremos
 const (
-	whiteIndex = 0
+	whiteIndex = 0 // Colores que se usraán para las imágenes
 	blackIndex = 1
 )
 
@@ -31,7 +31,7 @@ func lissajous(out io.Writer) {
 		delay   = 8
 	)
 	freq := rand.Float64() * 10.0
-	anim := gif.GIF{LoopCount: nframes}
+	anim := gif.GIF{LoopCount: nframes} // Creando un GIF
 	phase := 0.0
 	for i := 0; i < nframes; i++ {
 		rect := image.Rect(0, 0, 2*size+1, 2*size+1)
