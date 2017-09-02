@@ -1,4 +1,4 @@
-// Crea un Gif con una figura de Lissajour
+// Crea un Gif con una figura de Lissajous
 // (curvas extrañas)
 package main
 
@@ -13,7 +13,10 @@ import (
 	"os"
 )
 
-var palette = []color.Color{color.White, color.Black} // Declaramos la paleta de Colores que usaremos
+// Declaramos la paleta de Colores que usaremos
+// El primero lo usaremos como fondo y el segundo como color de líneas
+var palette = []color.Color{color.White, color.RGBA{255, 10, 200, 1}}
+
 const (
 	whiteIndex = 0 // Colores que se usraán para las imágenes
 	blackIndex = 1
