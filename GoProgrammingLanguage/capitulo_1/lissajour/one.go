@@ -19,7 +19,7 @@ var palette = []color.Color{color.White, color.RGBA{255, 10, 200, 1}}
 
 const (
 	whiteIndex = 0 // Colores que se usraán para las imágenes
-	blackIndex = 1
+	blackIndex = 1 // Color de línea
 )
 
 func main() {
@@ -36,8 +36,8 @@ func lissajous(out io.Writer) {
 	freq := rand.Float64() * 10.0
 	anim := gif.GIF{LoopCount: nframes} // Creando un GIF
 	phase := 0.0
-	for i := 0; i < nframes; i++ {
-		rect := image.Rect(0, 0, 2*size+1, 2*size+1)
+	for i := 0; i < nframes; i++ { // Creando cada cuadro de la animación
+		rect := image.Rect(0, 0, 2*size+1, 2*size+1) // Se usará como un plano cartesiano
 		img := image.NewPaletted(rect, palette)
 		for t := 0.0; t < cycles*2*math.Pi; t += res {
 			x := math.Sin(t)
