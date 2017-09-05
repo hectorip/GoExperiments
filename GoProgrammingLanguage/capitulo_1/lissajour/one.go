@@ -17,8 +17,14 @@ import (
 
 // Declaramos la paleta de Colores que usaremos
 // El primero lo usaremos como fondo y el segundo como color de líneas
-var palette = []color.Color{color.White, color.RGBA{255, 10, 200, 1}, color.RGBA{0, 200, 50, 1}}
-
+var palette = []color.Color{
+	color.White,
+	color.RGBA{255, 10, 200, 1},
+	color.RGBA{0, 200, 50, 1},
+	color.RGBA{0, 255, 255, 1},
+	color.RGBA{0, 200, 50, 1},
+}
+cl := len(palette) - 1
 const (
 	whiteIndex = 0 // Colores que se usraán para las imágenes
 	blackIndex = 1 // Color de línea
@@ -29,15 +35,16 @@ func main() {
 	lissajous(os.Stdout)
 }
 func lissajous(out io.Writer) {
-	args = os.Args[1:]
+	args := os.Args[1:]
+	cycles, _ := strconv.ParseFloat(args[0], 64)
 	const (
-		cycles  = strconv.Atoi(args[0])
 		res     = 0.001
-		size    = 100
+		size    = 200
 		nframes = 64
 		delay   = 8
 	)
-	freq := rand.Float64() * strcnv.Atoi(10.0)
+	m, _ := strconv.ParseFloat(args[1], 64)
+	freq := rand.Float64() * m
 	anim := gif.GIF{LoopCount: nframes} // Creando un GIF
 	phase := 0.0
 	for i := 0; i < nframes; i++ { // Creando cada cuadro de la animación
@@ -47,7 +54,7 @@ func lissajous(out io.Writer) {
 			x := math.Sin(t)
 			y := math.Sin(t*freq + phase)
 			// fmt.Println(size + int(x*size+0.5))
-			index := uint8(rand.Intn(2) + 1)
+			index := uint8(rand.Intn(cl) + 1)
 			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), index)
 		}
 		phase += 0.1
