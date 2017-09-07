@@ -41,8 +41,8 @@ func lissajous(out io.Writer) {
 	args := os.Args[1:]
 	cycles, _ := strconv.ParseFloat(args[0], 64)
 	const (
-		res     = 0.0001
-		size    = 200
+		res     = 0.0001 // 'sharpnesss'
+		size    = 200    // la imagen medirá lo doble
 		nframes = 128
 		delay   = 8
 	)
@@ -58,7 +58,6 @@ func lissajous(out io.Writer) {
 		for t := 0.0; t < cycles*2*math.Pi; t += res {
 			x := math.Sin(t)
 			y := math.Sin(t*freq + phase)
-			// fmt.Println(size + int(x*size+0.5))
 			t2 += res
 			// if 3.1415-t2 <= 0.1 {
 			// 	// fmt.Println("YESS")
@@ -75,7 +74,6 @@ func lissajous(out io.Writer) {
 			} else {
 				index = 0
 			}
-			// fmt.Println(index)
 			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), index)
 		}
 		phase += 0.2
