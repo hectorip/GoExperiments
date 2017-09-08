@@ -59,12 +59,10 @@ func lissajous(out io.Writer) {
 			x := math.Sin(t)
 			y := math.Sin(t*freq + phase)
 			t2 += res
-			// if 3.1415-t2 <= 0.1 {
-			// 	// fmt.Println("YESS")
-			// 	index = uint8(rand.Intn(cl) + 1)
-			// 	// fmt.Println(index)
-			// 	t2 = 0
-			// }
+			if 3.1415-t2 <= 0.1 {
+				index = uint8(rand.Intn(cl) + 1)
+				t2 = 0
+			} // Changing colorr every cycle
 			if y >= 0.0 && y <= 0.3 {
 				index = 5
 			} else if y >= 0.3 && y <= 0.6 {
