@@ -59,19 +59,24 @@ func lissajous(out io.Writer) {
 			x := math.Sin(t)
 			y := math.Sin(t*freq + phase)
 			t2 += res
+
+			// Changing colorr every cycle
 			if 3.1415-t2 <= 0.1 {
 				index = uint8(rand.Intn(cl) + 1)
 				t2 = 0
-			} // Changing colorr every cycle
-			if y >= 0.0 && y <= 0.3 {
-				index = 5
-			} else if y >= 0.3 && y <= 0.6 {
-				index = 1
-			} else if y >= 0.6 && y <= 0.9 {
-				index = 2
-			} else {
-				index = 0
 			}
+			// Creating stripes of specific colors across all
+			// the frames
+
+			// if y >= 0.0 && y <= 0.3 {
+			// 	index = 5
+			// } else if y >= 0.3 && y <= 0.6 {
+			// 	index = 1
+			// } else if y >= 0.6 && y <= 0.9 {
+			// 	index = 2
+			// } else {
+			// 	index = 0
+			// }
 			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), index)
 		}
 		phase += 0.2
