@@ -1,5 +1,5 @@
-// Crea un Gif con una figura de Lissajous
-// (curvas extrañas)
+// Crea un gif con una Curva de Lissajous
+// (Intersección de dos curvas senosoidales)
 package main
 
 import (
@@ -11,7 +11,6 @@ import (
 	"math"
 	"math/rand"
 	"os"
-	// "sys"
 	"strconv"
 )
 
@@ -27,11 +26,11 @@ var palette = []color.Color{
 }
 var cl = len(palette) - 1
 
-const (
-	whiteIndex = 0 // Colores que se usraán para las imágenes
-	blackIndex = 1 // Color de línea
-	greenIndex = 2 // Color de línea
-)
+// const (
+// 	whiteIndex = 0 // Colores que se usraán para las imágenes
+// 	blackIndex = 1 // Color de línea
+// 	greenIndex = 2 // Color de línea
+// )
 
 func main() {
 	// fmt.Println(cl)
