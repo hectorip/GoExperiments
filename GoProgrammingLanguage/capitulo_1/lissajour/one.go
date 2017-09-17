@@ -15,7 +15,8 @@ import (
 )
 
 // Declaramos la paleta de Colores que usaremos
-// El primero lo usaremos como fondo y el segundo como color de líneas
+// `color` viene de el import `image/color`, y siempre se usa la última
+// parte en el código
 var palette = []color.Color{
 	color.White,
 	color.RGBA{255, 10, 100, 1},
