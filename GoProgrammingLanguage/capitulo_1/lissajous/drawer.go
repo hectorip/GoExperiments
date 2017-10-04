@@ -1,11 +1,12 @@
 // Crea un gif con una Curva de Lissajous
 // (Intersección de dos curvas senosoidales)
+
 package main
 
 import (
 	// "fmt"
 	"image"
-	"image/color"
+	"image/color" // Cuando un paquete tiene varias partes, dentro del código te refieres a él con la última parte.Ej. color.Color
 	"image/gif"
 	"io"
 	"math"
@@ -40,7 +41,7 @@ func main() {
 func lissajous(out io.Writer) {
 	args := os.Args[1:]
 	cycles, _ := strconv.ParseFloat(args[0], 64)
-	const (
+	const ( // las constantes están disponibles en tiempo de compilación, ser números, strings o booleanos
 		res     = 0.0001 // 'sharpnesss'
 		size    = 200    // la imagen medirá lo doble
 		nframes = 128
