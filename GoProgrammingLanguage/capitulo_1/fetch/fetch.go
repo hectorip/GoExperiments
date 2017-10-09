@@ -8,6 +8,7 @@ import (
 
 func main() {
 	for i, url := range sys.Args[1:] {
-		resp, err := http.Get()
+		resp, err := http.Get(url)
+
 	}
 }
