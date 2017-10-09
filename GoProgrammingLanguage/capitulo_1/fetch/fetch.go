@@ -14,6 +14,7 @@ func main() {
 			fmt.Printf("Error retrieving: %s, Error: %s", url, resp)
 		}
 		body, err := ioutil.ReadAll(resp.Body)
+		resp.Body.Close()
 		if err != nil {
 			fmt.Printf("Error reading response from %s, Error: %s", url, err)
 		}
