@@ -35,5 +35,5 @@ func timed_fetch(url string, ch chan<- string) {
 		return
 	}
 	elapsed := time.Since(start).Seconds()
-	ch <- fmt.Sprintf("%.2fs %07d %s", elapsed, byteCount, url)
+	ch <- fmt.Sprintf("%.2fs %07d %s", elapsed, byteCount, url) // enviando al canal, se bloquea hasta que alguien recibe el mensaje
 }
