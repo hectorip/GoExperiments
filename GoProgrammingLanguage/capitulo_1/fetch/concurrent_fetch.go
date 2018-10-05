@@ -1,5 +1,7 @@
 package main
 
+// Trae n URL's levantando una Go rutina para cada una
+
 import (
 	"fmt"
 	"io"
