@@ -8,6 +8,7 @@ que aprendo a través de apuntes en MD, si no, siento que no aprendo, además, e
 
 Uso el libro "The Go Programming Language", escrito por Alan A. A. Donovan y Brian Kernighan.
 
+Tal vez también incluya los dos libros del paquete de libros: [12 Factor Applications with Docker and Go](https://leanpub.com/12fa-docker-golang) de Leanpub.
 
 ## Por qué Go
 
